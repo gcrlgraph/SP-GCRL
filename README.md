@@ -1,6 +1,6 @@
 ## Overview
 
-SPGCRL combines graph contrastive learning (GCL) with Double DQN (DDQN) to solve the influence maximization problem on directed social networks. The framework consists of three stages:
+SPGCRL combines graph contrastive learning (GCL) with Double DQN (DDQN) to solve the influence maximization problem on directed social networks. The framework consists of four stages:
 
 1. **Strategy 1 (DataStrategy1.py)** — Path inverse entropy H(v) based subgraph augmentation
 2. **Strategy 2 (DataStrategy2.py)** — Propagation control C(i) based subgraph augmentation  
