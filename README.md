@@ -7,20 +7,6 @@ SPGCRL combines graph contrastive learning (GCL) with Double DQN (DDQN) to solve
 3. **GCL Pre-training (GCL.py)** — Contrastive learning on augmented graph views
 4. **DDQN Seed Selection (DDQN.py)** — Reinforcement learning for influence maximization
 
-## Project Structure
-
-```
-SPGCRL/
-├── data/                  # Graph datasets (included)
-├── DataStrategy1.py       # Strategy 1: HV-based augmentation & HV Predictor training
-├── DataStrategy2.py       # Strategy 2: Propagation control augmentation & C Predictor training
-├── GCL.py                 # Graph contrastive learning model & training
-├── DDQN.py                # Double DQN agent for seed selection
-├── ic3.py                 # Information cascade propagation model (IC3)
-├── data_loader.py         # Dataset loading utilities
-├── weight_calculate.py    # Edge weight computation
-└── requirements.txt
-```
 
 ## Installation
 
