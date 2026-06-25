@@ -13,9 +13,7 @@ import numpy as np
 import random
 import argparse
 
-# ============================================================================
-# Reproducibility
-# ============================================================================
+
 SEED = 42
 random.seed(SEED)
 np.random.seed(SEED)
