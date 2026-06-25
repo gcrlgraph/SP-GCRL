@@ -1,19 +1,3 @@
-"""
-Information Cascade Propagation Model (IC3)
-============================================
-Implements a beta-activation propagation model for simulating information
-spread in directed social networks.
-
-Key components:
-- Beta-activation propagation: BFS-based cascade with exposure-dependent
-  activation probability. The activation probability for node v is:
-    p = alpha_i * x * (1 - gamma)^(x^omega)
-  where x is the exposure count, alpha_i is the edge weight, gamma is the
-  global network tightness parameter, and omega controls the decay rate.
-- Gamma computation: Global network structure parameter based on average
-  Jaccard similarity of in-neighborhoods across all nodes.
-"""
-
 from collections import defaultdict, deque
 import torch
 import math

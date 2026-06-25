@@ -491,20 +491,13 @@ if __name__ == "__main__":
         print(f"Runtime excluding evaluation: {run_time:.2f}s")
         results.append({
             'seed_size': seed_size,
-            'experiment': exp_idx+1,
-            'average_mc': float(avg_act),
-            'deterministic': float(det_act),
-            'Selected Seeds': sorted(final_selected),
-            'model_path': model_path,
-            'run_time_need': run_time,  # excluding evaluation time
-            'eval_time_not_need': eval_mc_time,
-            'eval_reward': eval_reward,  # diffusion score for this experiment
+            'avg_activation': float(avg_act)
         })
         seed_size_results.append(results[-1])
 
         # Print summary
         if seed_size_results:
-            acts = [r['average_mc'] for r in seed_size_results]
+            acts = [r['avg_activation'] for r in seed_size_results]
             print(f"Seed {seed_size} average activation: {avg_act} ")
 
     # Save results

@@ -1,19 +1,3 @@
-"""
-Strategy 2: Propagation Control Based Subgraph Augmentation
-============================================================
-This module implements the second graph augmentation strategy for SPGCRL.
-
-Core idea:
-- Compute the propagation control score C(i) for each node using the
-  transition matrix power series: W_c = sum_{t=0}^{T} P^t (P^t)^T
-- C(i) = sum_j W_c(i,j), measuring how much node i can control information
-  propagation across the network.
-- Train a C_Predictor (inheriting from HVPredictor) to predict C(i) from
-  augmented subgraphs.
-- CSubgraphGenerator creates augmented views based on top-k propagation
-  control nodes.
-"""
-
 import os
 import random
 import torch

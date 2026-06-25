@@ -1,20 +1,3 @@
-"""
-Strategy 1: Path Inverse Entropy (HV) Based Subgraph Augmentation
-==================================================================
-This module implements the first graph augmentation strategy for SPGCRL.
-
-Core idea:
-- Compute the path inverse entropy H(v) for each node, which measures the
-  diversity of shortest-path weights from predecessors to node v.
-- Train an HVPredictor neural network (with attention-like message passing)
-  to predict H(v) from augmented subgraphs.
-- The SubgraphGenerator creates augmented graph views by:
-  1. Selecting top-k nodes by H(v) as critical nodes
-  2. Preserving all edges connected to critical nodes
-  3. Randomly sampling a fraction of remaining edges
-  4. Applying random feature masking
-"""
-
 import math
 import os
 import torch
